@@ -1,8 +1,6 @@
-package concurrent;
+package consumer;
 
-import java.util.Queue;
 import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.TimeUnit;
 
 public class ProducerConsumerDemo {
 
@@ -18,8 +16,8 @@ public class ProducerConsumerDemo {
         Thread producer = new Thread(new Producer(), "producer");
 
         producer.start();
-//        consumer1.start();
-//        consumer2.start();
+        consumer1.start();
+        consumer2.start();
     }
 
     static class Consumer implements Runnable{
